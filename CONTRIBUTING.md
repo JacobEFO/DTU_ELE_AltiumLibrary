@@ -40,7 +40,7 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 * Alternative parameters such as current, voltage, operating temperature and etc
 
 #### Other guidelines for schematic symbols
-* Logic components such as AND, NAND, NOR, Opamp, Comparators etc should be drawn as individual parts. That way a single AND of a QUAD-AND can be placed individually. This increases the schematic readability.
+* Logic components such as AND, NAND, NOR, Opamp, Comparators etc should be drawn as individual parts. That way a single AND of a QUAD-AND can be placed individually. This improves the schematic readability.
 * Optocouplers and current-mirror integrated components can be drawn as individual parts or in the same package
 * Make the component as detailed as possible. For instance MOSFET body-diode, NPN/PNP BJT gate-resistor for logic devices.
 
