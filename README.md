@@ -3,23 +3,11 @@
 An Altium Library for DTU (Technical University of Denmark) Institute for Electrical Engineering, Electronics (ELE).
 
 
-Technical University of Denmark
-
-Electrical Engineering
-
-Richard Petersens Plads,
-
-Building 325, 2nd.
-
-2800 - Kongens Lynbgy
-
-Denmark
-
 ## Contributing
-Please read [CONTRIBUTING.md](CONTRUBING.md) for a code of conduct.
+Please read [CONTRIBUTING.md](CONTRUBUTING.md) for a code of conduct. This will follow the user through the process and requirements for contributing to the DTU ELE Altium Library.
 
 ## Librarian
-### Former Librarians
+As of right now, the DTU ELE Altium Library is maintained by the following librarian(s):
 ** Jacob E. Overgaard ** - jacob.overgaard.andersen@gmail.com
 
 ## Authors
