@@ -48,7 +48,9 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 If the component is safety critical (X/Y capacitor for instance) it must be clearly marked, and it should note that the component is safety critical requiring at least xxxx of voltage/tolerance/standard. An X/Y capacitor should for instance include a parameter called “Suppression Class” for the required class, say Y2.
 
 The safety mark could look like this:
-<img src="figures/safetycritical.png" alt="Drawing" style="width: 60%;"/>
+
+<div style="text-align:center"><img src="figures/safetycritical.png" alt="Drawing" style="width: 60%;"/></div>
+
 In this manner, the user/designer will easily catch on to the importance of the safety rated component.
 
 ### Footprints
