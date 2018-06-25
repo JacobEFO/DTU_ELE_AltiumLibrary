@@ -9,6 +9,43 @@ If these guidelines are not followed, the pull request will be declined.
 Update this with some text.
 
 ### Schematic Symbols
+This section contains the rules and guidelines for the schematic symbols.
+* Always drawn in mils
+* Symbol comment and desciption must be filled
+
+#### Must have parameters
+The following parameters are a bare minimum, and must be written in the given format.
+<!-- Give a link to my Altium script -->
+* Manufacturer
+* Manufacturer part number
+* Published (when was this model released, yyyy-mm-dd)
+* Publisher (who created it, initials or full name)
+* Datasheet version (write as given in datasheet)
+* Link to used datasheet (preferably the given manufacturer)
+
+#### Nice-to-have parameters
+These are nice-to-have parameters, used for quick and easy BOM generation and symbol assessment.
+* LatestRevisionNote
+* LatestRevisionDate
+* LatestRevisionAuthor
+* PackageDescription
+* PackageReference
+* Farnell part number
+* Digikey part number
+* Mouser part number
+* RSonline part number
+* Tolerance
+* Voltage rating (note if AC or DC)
+* Dielectric/material (dielectric if capacitor, material if a specific resistor)
+* Alternative parameters such as current, voltage, operating temperature and etc
+
+#### Other guidelines for schematic symbols
+* Logic components such as AND, NAND, NOR, Opamp, Comparators etc should be drawn as individual parts. That way a single AND of a QUAD-AND can be placed individually. This increases the schematic readability.
+* Optocouplers and current-mirror integrated components can be drawn as individual parts or in the same package
+* Make the component as detailed as possible. For instance MOSFET body-diode, NPN/PNP BJT gate-resistor for logic devices.
+
+#### Safety critical components
+
 
 ### Footprints
 
