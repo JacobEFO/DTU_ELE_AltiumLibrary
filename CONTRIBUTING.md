@@ -46,6 +46,9 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 
 #### Safety critical components
 
+<img src="figures/safetycritical.png" alt="Drawing" style="width: 60%;"/>
+
+
 
 ### Footprints
 
