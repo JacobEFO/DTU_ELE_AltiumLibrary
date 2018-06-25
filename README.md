@@ -19,6 +19,12 @@ Building 325, 2nd.
 
 Denmark
 
-## Rules and Requirements
-Update this with some text.
+## Contributing
+Please read [CONTRIBUTING.md](https://github.com/JacobEFO/DTU_ELE_AltiumLibrary/blob/master/CONTRUBINT.md) for a code of conduct.
 
+## Librarian
+### Former Librarians
+** Jacob E. Overgaard ** - jacob.overgaard.andersen@gmail.com
+
+## Authors
+** Jacob E. Overgaard ** - jacob.overgaard.andersen@gmail.com
