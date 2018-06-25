@@ -45,6 +45,7 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 * Make the component as detailed as possible. For instance MOSFET body-diode, NPN/PNP BJT gate-resistor for logic devices.
 
 #### Safety critical components
+ <span style="color:red">#### Safety critical components</span>.
 If the component is safety critical (X/Y capacitor for instance) it must be clearly marked, and it should note that the component is safety critical requiring at least xxxx of voltage/tolerance/standard. An X/Y capacitor should for instance include a parameter called “Suppression Class” for the required class, say Y2.
 
 The safety mark could look like this:
