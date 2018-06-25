@@ -8,6 +8,9 @@ If these guidelines are not followed, the pull request will be declined.
 ## Rules and Requirements
 Update this with some text.
 
+### Sample Library
+A sample library is given in 'Component/Sample_Library'.
+
 ### Schematic Symbols
 This section contains the rules and guidelines for the schematic symbols.
 * Always drawn in mils
@@ -17,10 +20,11 @@ This section contains the rules and guidelines for the schematic symbols.
 The following parameters are a bare minimum, and must be written in the given format.
 <!-- Give a link to my Altium script -->
 * Manufacturer
-* Manufacturer part number
+* Manufacturer Part Number
 * Published (when was this model released, yyyy-mm-dd)
 * Publisher (who created it, initials or full name)
-* Datasheet version (write as given in datasheet)
+* PackageVersion
+* DatasheetVersion
 * Link to used datasheet (preferably the given manufacturer)
 
 #### Nice-to-have parameters
@@ -30,10 +34,12 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 * LatestRevisionAuthor
 * PackageDescription
 * PackageReference
-* Farnell part number
-* Digikey part number
-* Mouser part number
-* RSonline part number
+* Farnell Part Number
+* Digikey Part Number
+* Mouser Part Number
+* RSonline Part Number
+* Mounting Technology
+* Package Specification (as a link to an eventual external package drawing)
 * Tolerance
 * Voltage rating (note if AC or DC)
 * Dielectric/material (dielectric if capacitor, material if a specific resistor)
@@ -57,8 +63,10 @@ The safety mark could look like this:
 In this manner, the user/designer will easily catch on to the importance of the safety rated component.
 
 ### Footprints
+Footprints should in general include vendor codes. Here we stick to Altium's own default [Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes).
 
-[Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes)
+Layers to use:
+
 
 ### Integrated
 
