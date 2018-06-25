@@ -4,7 +4,7 @@ An Altium Library for DTU (Technical University of Denmark) Institute for Electr
 
 
 ## Contributing
-Please read [CONTRIBUTING.md](CONTRUBUTING.md) for a code of conduct. This will follow the user through the process and requirements for contributing to the DTU ELE Altium Library.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for a code of conduct. This will follow the user through the process and requirements for contributing to the DTU ELE Altium Library.
 
 ## Librarian
 As of right now, the DTU ELE Altium Library is maintained by the following librarian(s):
