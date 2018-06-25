@@ -8,7 +8,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for a code of conduct. This will 
 
 ## Librarian
 As of right now, the DTU ELE Altium Library is maintained by the following librarian(s):
-** Jacob E. Overgaard ** - jacob.overgaard.andersen@gmail.com
+
+* **Jacob E. Overgaard** - jacob.overgaard.andersen@gmail.com
 
 ## Authors
-** Jacob E. Overgaard ** - jacob.overgaard.andersen@gmail.com
+* **Jacob E. Overgaard** - jacob.overgaard.andersen@gmail.com

@@ -12,6 +12,8 @@ Update this with some text.
 
 ### Footprints
 
+[Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes)
+
 ### Integrated
 
 ### Naming Convention
@@ -28,3 +30,4 @@ We suggest you read:
 
 [What's in a Name - Component Development Part 2](https://resources.altium.com/pcb-design-blog/whats-in-a-name-component-development-part-2)
 
+[What's the best way to make a library searchable? Parameters - Component Development Part 3](https://resources.altium.com/pcb-design-blog/whats-the-best-way-to-make-a-library-searchable-parameters-component-development-part-3)
