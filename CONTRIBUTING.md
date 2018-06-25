@@ -7,3 +7,24 @@ If these guidelines are not followed, the pull request will be declined.
 
 ## Rules and Requirements
 Update this with some text.
+
+### Schematic Symbols
+
+### Footprints
+
+### Integrated
+
+### Naming Convention
+
+
+## Licenses
+Under no circumstances must any licensed content excluding academic OR commercial use be used in the building of the components. This in general applies to especially 3d models found on the internet.
+
+## Online Guides
+
+We suggest you read:
+
+[Component Development best practices - Part 1](https://resources.altium.com/pcb-design-blog/component-development-best-practices-part-1)
+
+[What's in a Name - Component Development Part 2](https://resources.altium.com/pcb-design-blog/whats-in-a-name-component-development-part-2)
+

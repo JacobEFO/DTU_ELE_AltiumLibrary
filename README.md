@@ -1,8 +1,4 @@
 # DTU_ELE_AltiumLibrary
-Author: Jacob E. Overgaard
-
-Date: 2018-06-25
-
 ## Introduction
 An Altium Library for DTU (Technical University of Denmark) Institute for Electrical Engineering, Electronics (ELE).
 
@@ -20,7 +16,7 @@ Building 325, 2nd.
 Denmark
 
 ## Contributing
-Please read [CONTRIBUTING.md](https://github.com/JacobEFO/DTU_ELE_AltiumLibrary/blob/master/CONTRUBINT.md) for a code of conduct.
+Please read [CONTRIBUTING.md](CONTRUBING.md) for a code of conduct.
 
 ## Librarian
 ### Former Librarians
