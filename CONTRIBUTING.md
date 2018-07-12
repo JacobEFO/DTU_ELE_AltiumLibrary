@@ -67,6 +67,7 @@ In this manner, the user/designer will easily catch on to the importance of the 
 * Mechanical 15 : 
 
 | Layer         | Description                                                       |
+| --- | --- |
 | Mechanical 1  | 3d model and component outline                                    |
 | Mechanical 15 | Component courtyard and reference origin                          |
 | Mechanical 25 | Top placement, component outline and .Designator string in middle |
