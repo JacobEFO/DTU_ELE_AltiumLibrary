@@ -60,6 +60,18 @@ In this manner, the user/designer will easily catch on to the importance of the 
 
 [Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes)
 
+#### Layers
+
+* Mechanical 1
+
+* Mechanical 15 : 
+
+| Layer         | Description                                                       |
+| Mechanical 1  | 3d model and component outline                                    |
+| Mechanical 15 | Component courtyard and reference origin                          |
+| Mechanical 25 | Top placement, component outline and .Designator string in middle |
+| Mechanical 26 | Bottom placement, same as top layer if applicable |
+
 ### Integrated
 
 ### Naming Convention
