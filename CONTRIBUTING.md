@@ -70,6 +70,15 @@ In this manner, the user/designer will easily catch on to the importance of the 
 | Mechanical 25 | Top placement, component outline and .Designator string in middle | 0,1 mm 		|
 | Mechanical 26 | Bottom placement, same as top layer if applicable 				| 0.1 mm 		|
 
+##### Mechanical 1 - 3d model and component outline
+The 3d model is often made with a "place -> 3d body" and can either be a simple "box" with the width, lenght and height of the actual component. The component outline outlines with 0.1 mm wide lines where the 3d body ends.
+
+##### Mechanical 15 - Courtyard & Reference origin
+The courtyard is used to describe the distance from the component and land patterns to components around. [IPC-7251](http://www.ipc.org/committee/drafts/1-13_d_7251WD1.pdf) is a standard for land patterns and describes the point and requirements for courtyard excess.
+
+In the DTU Altium Library nominal courtyard excess is used: 0.25 mm from the outer bondaries of the component.
+
+
 ### Integrated
 
 ### Naming Convention
