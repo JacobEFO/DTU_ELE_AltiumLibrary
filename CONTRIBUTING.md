@@ -62,16 +62,13 @@ In this manner, the user/designer will easily catch on to the importance of the 
 
 #### Layers
 
-* Mechanical 1
-
-* Mechanical 15 : 
-
-| Layer         | Description                                                       |
-| --- | --- |
-| Mechanical 1  | 3d model and component outline                                    |
-| Mechanical 15 | Component courtyard and reference origin                          |
-| Mechanical 25 | Top placement, component outline and .Designator string in middle |
-| Mechanical 26 | Bottom placement, same as top layer if applicable |
+| Layer         | Description                                                       | Line Width 	|
+| --- 			| --- 																| --- 			|
+| Overlay		| Silkscreen														| 0.2 mm 		|
+| Mechanical 1  | 3d model and component outline                                    | 0.1 mm 		|
+| Mechanical 15 | Component courtyard and reference origin							| 0.1 mm 		|
+| Mechanical 25 | Top placement, component outline and .Designator string in middle | 0,1 mm 		|
+| Mechanical 26 | Bottom placement, same as top layer if applicable 				| 0.1 mm 		|
 
 ### Integrated
 
