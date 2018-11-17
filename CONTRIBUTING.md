@@ -66,17 +66,28 @@ In this manner, the user/designer will easily catch on to the importance of the 
 | --- 			| --- 																| --- 			|
 | Overlay		| Silkscreen														| 0.2 mm 		|
 | Mechanical 1  | 3d model and component outline                                    | 0.1 mm 		|
-| Mechanical 15 | Component courtyard and reference origin							| 0.1 mm 		|
+| Mechanical 15 | Top component courtyard and center point							| 0.1 mm 		|
+| Mechanical 16 | Bottom component courtyard and center point						| 0.1 mm 		|
 | Mechanical 25 | Top placement, component outline and .Designator string in middle | 0,1 mm 		|
 | Mechanical 26 | Bottom placement, same as top layer if applicable 				| 0.1 mm 		|
+| Mechanical 27 | Reserved for PCB board outlines 					 				| N/A 	 		|
 
 ##### Mechanical 1 - 3d model and component outline
 The 3d model is often made with a "place -> 3d body" and can either be a simple "box" with the width, lenght and height of the actual component. The component outline outlines with 0.1 mm wide lines where the 3d body ends.
 
-##### Mechanical 15 - Courtyard & Reference origin
+##### Mechanical 15/16 - Courtyard and center point
+Mechanical 15 and 16 layers must be setup as a layer pair, so the component courtyard and reference origin automatically switches layers as well.
+
 The courtyard is used to describe the distance from the component and land patterns to components around. [IPC-7251](http://www.ipc.org/committee/drafts/1-13_d_7251WD1.pdf) is a standard for land patterns and describes the point and requirements for courtyard excess.
 
-In the DTU Altium Library nominal courtyard excess is used: 0.25 mm from the outer bondaries of the component.
+In the DTU Altium Library nominal courtyard excess is used: 0.25 mm from the outer bondaries of the component. This value is measured from the center of the 3d-outline line. The center point is made of a "cross" with 0.1mm wide 1mm lines.
+
+##### Mechanical 25/26 - Placement layer
+This layer is used for a PDF printout of where which components must be placed. This way people can easily assess that this one is IC1, R32 here and the like without the need for bulky silkscreen.
+
+The placement layer must contain a special string ".Designator" in the middle of the placement body assigning the designator of the component. The standard size for this is 0.5 mm height.
+
+Special attention must be brought to components like polarized capacitors, diodes and ICs with numbers. Said packages' placement layers must easily assess in which direction pin 1 (or cathode) is oriented.
 
 
 ### Integrated
