@@ -10,7 +10,7 @@ Update this with some text.
 
 ### Schematic Symbols
 This section contains the rules and guidelines for the schematic symbols.
-* Always drawn in mils
+* Always drawn in mils on a 50 mil grid
 * Symbol comment and desciption must be filled
 
 #### Must have parameters
