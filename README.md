@@ -1,12 +1,14 @@
 # DTU ELE Altium Library
 ## Introduction
-An Altium Library for DTU (Technical University of Denmark) Institute for Electrical Engineering, Electronics (ELE).
+This repository is used for issue tracking and guidelines for the DTU ELE Altium library.
 
 ## Using DTU ELE Altium Library
-To use the provided library, install the compiled component libraries from 'lib/Components' to Altium Designer. This can be done under 'Data Management -> Installed Libraries'.
+To access the ELE library you will be using our internal Altium Vault. To gain access to this we suggest you follow the guide on Inside.
 
 ## Contributing
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for a code of conduct. This will follow the user through the process and requirements for contributing to the DTU ELE Altium Library.
+
+To ensure coherence accross components and symbols, it's important to have a straight set of rules, which we have tried to conduct in the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Librarian
 As of right now, the DTU ELE Altium Library is maintained by the following librarian(s):
