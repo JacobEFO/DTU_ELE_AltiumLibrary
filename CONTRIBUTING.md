@@ -37,7 +37,7 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 * Alternative parameters such as current, voltage, operating temperature and etc
 
 #### Designators
-All components must in general carry on a meaningful designator.
+All components must in general include a meaningful designator.
 
 | Designator    | Component Type						|
 | --- 			| --- 									|
@@ -90,20 +90,28 @@ The safety mark could look like this:
 
 In this manner, the user/designer will easily catch on to the importance of the safety rated component.
 
+#### Confidential components
+FIND A WAY TO DEAL WITH CONFIDENTIAL STUFF!!! Maybe they should not be included in the Altium library at all.
+
 ### Footprints
 
-[Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes)
+#### Naming convention
+For manufacturer specific footprints or footprints made according to a given manufacturer's specifics, the naming must carry the manufacturer name according to Altium's default [Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes).
+
+| Company         	| Abbreviation 	|
+| Nexperia 			| NEXP 			|
 
 #### Layers
 
 | Layer         | Description                                                       | Line Width 	|
 | --- 			| --- 																| --- 			|
 | Overlay		| Silkscreen														| 0.2 mm 		|
-| Mechanical 1  | 3d model and component outline                                    | 0.1 mm 		|
+| Mechanical 1 (and 2 maybe)  | 3d model and component outline (maybe as a layer pair)                                   | 0.1 mm 		|
+| Mechanical x-x  | Text/ruler notes for each signal layer maybe                    | 0.1 mm 		|
 | Mechanical 15 | Top component courtyard and center point							| 0.1 mm 		|
 | Mechanical 16 | Bottom component courtyard and center point						| 0.1 mm 		|
-| Mechanical 25 | Top placement, component outline and .Designator string in middle | 0,1 mm 		|
-| Mechanical 26 | Bottom placement, same as top layer if applicable 				| 0.1 mm 		|
+| Mechanical 25 (Could use Draftsman instead) | Top placement, component outline and .Designator string in middle | 0,1 mm 		|
+| Mechanical 26 (Could use Draftsman instead) | Bottom placement, same as top layer if applicable 				| 0.1 mm 		|
 | Mechanical 27 | Reserved for PCB board outlines 					 				| N/A 	 		|
 
 ##### Mechanical 1 - 3d model and component outline
