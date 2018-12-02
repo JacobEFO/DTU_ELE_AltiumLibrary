@@ -138,7 +138,10 @@ The overlay layer is not mandatory to include, but it often increases the overvi
 when component leads extend outward.
 
 <p align="center">
-	<img src="figures/SilkscreenPolarityMarking.png" alt="Drawing" style="width: 60%;"/>
+	<img src="figures/SilkscreenPolarityMarking.png" alt="SilkscreenPolarity" style="width: 60%;"/>
+</p>
+<p align="center">
+	<img src="figures/safetycritical.png" alt="Drawing2" style="width: 60%;"/>
 </p>
 
 ##### Mechanical 2/3 - Assembly layer
