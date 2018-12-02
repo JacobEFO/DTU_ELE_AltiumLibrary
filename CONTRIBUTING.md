@@ -6,6 +6,7 @@ In order to have a coherent structure please follow the upcomming rules and requ
 ## Rules and Requirements
 
 ### Vault components
+
 When generating components for the vault, using the standard template will include most of the required parameters
 
 <!-- ### Schematic Symbols
@@ -35,6 +36,8 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 * Dielectric/material (dielectric if capacitor, material if a specific resistor)
 * Alternative parameters such as current, voltage, operating temperature and etc
  -->
+#### Componend Descriptions
+
 #### Designators
 All components must in general include a meaningful designator.
 
@@ -98,6 +101,7 @@ FIND A WAY TO DEAL WITH CONFIDENTIAL STUFF!!! Maybe they should not be included 
 For manufacturer specific footprints or footprints made according to a given manufacturer's specifics, the naming must carry the manufacturer name according to Altium's default [Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes).
 
 | Company         	| Abbreviation 	|
+| --- 				| --- 			|
 | Nexperia 			| NEXP 			|
 
 #### Layers
@@ -120,10 +124,10 @@ The overlay is the silkscreen layer. This layer most often contains a part of th
 The overlay layer is not mandatory to include, but it often increases the overview of the PCB as well as improves the assembly process.
 
 1. Reference designator must be drawn directly on the silkscreen layer
-* Text size must be 1 mm high
-* Text width must be 0.15 mm
+	* Text size must be 1 mm high
+	* Text width must be 0.15 mm
 2. Silkscreen must not be placed over pads or areas of exposed copper
-* Clearance between silkscreen and exposed copper elements must be at least 0.2mm.
+	* Clearance between silkscreen and exposed copper elements must be at least 0.2mm.
 3. Silkscreen outlines should be inside placement courtyard
 4. For SMD footprints, silkscreen must be fully visible after boards assembly (no silkscreen allowed under component)
 5. For through-hole components, silkscreen may be placed under component to aid in assembly process
