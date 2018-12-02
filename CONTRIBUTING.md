@@ -89,7 +89,6 @@ The safety mark could look like this:
 	<img src="figures/safetycritical.png" alt="Drawing" style="width: 60%;"/>
 </p>
 
-
 In this manner, the user/designer will easily catch on to the importance of the safety rated component.
 
 #### Confidential components
@@ -106,32 +105,36 @@ For manufacturer specific footprints or footprints made according to a given man
 
 #### Layers
 
-| Layer         	| Description                                                       	| Line Width 	|
-| --- 				| --- 																	| --- 			|
-| Overlay			| Silkscreen															| 0.2 mm 		|
-| Mechanical 2 		| Top assembly, component outline and .Designator string in middle 		| 0.1 mm 		|
-| Mechanical 3 		| Bottom assembly, component outline and .Designator string in middle 	| 0.1 mm 		|
-| Mechanical 4  	| Top component courtyard and center point								| 0.1 mm 		|
-| Mechanical 5  	| Bottom component courtyard and center point							| 0.1 mm 		|
-| Mechanical 6 		| Top 3d model and component outline  									| 0.1 mm 		|
-| Mechanical 7 		| Bottom 3d model and component outline 								| 0.1 mm 		|
-| Mechanical [8-10]	| Text/ruler/notes for 						                   			| 0.1 mm 		|
-| Mechanical 27 	| Reserved for PCB board outlines 					 					| N/A 	 		|
+| Layer         	| Description                                                       	|
+| --- 				| --- 																	|
+| Overlay			| Silkscreen															|
+| Mechanical 2 		| Top Assembly 															|
+| Mechanical 3 		| Bottom assembly 													 	|
+| Mechanical 4  	| Top component courtyard and center point								|
+| Mechanical 5  	| Bottom component courtyard and center point							|
+| Mechanical 6 		| Top 3d model and component outline  									|
+| Mechanical 7 		| Bottom 3d model and component outline 								|
+| Mechanical 8 		| Reserved for PCB notes (manufacturer)	 								|
+| Mechanical 9 		| Reserved for PCB notes (in-house)										|
+| Mechanical 10 	| Reserved for top side dimensions  									|
+| Mechanical 11 	| Reserved for bottom side dimensions 									|
+| Mechanical 27 	| Reserved for PCB board outlines 					 					|
 
-##### Overlay
+##### Overlay (silkscreen)
 The overlay is the silkscreen layer. This layer most often contains a part of the component outline, pin 1 reference and designator.
 
 The overlay layer is not mandatory to include, but it often increases the overview of the PCB as well as improves the assembly process.
 
-1. Reference designator must be drawn directly on the silkscreen layer
-	* Text size must be 1 mm high
-	* Text width must be 0.15 mm
-2. Silkscreen must not be placed over pads or areas of exposed copper
+1. Silkscreen linewidth = 0.2 mm
+2. Reference designator must be drawn directly on the silkscreen layer
+	* Text size = 1 mm
+	* Text width = 0.15 mm
+3. Silkscreen must not be placed over pads or areas of exposed copper
 	* Clearance between silkscreen and exposed copper elements must be at least 0.2mm.
-3. Silkscreen outlines should be inside placement courtyard
-4. For SMD footprints, silkscreen must be fully visible after boards assembly (no silkscreen allowed under component)
-5. For through-hole components, silkscreen may be placed under component to aid in assembly process
-6. Pin 1 is identified by extending the silkscreen along Pin 1 length of pads
+4. Silkscreen outlines should be inside placement courtyard
+5. For SMD footprints, silkscreen must be fully visible after boards assembly (no silkscreen allowed under component)
+6. For through-hole components, silkscreen may be placed under component to aid in assembly process
+7. Pin 1 is identified by extending the silkscreen along Pin 1 length of pads
 when component leads extend outward.
 
 <p align="center">
@@ -139,21 +142,53 @@ when component leads extend outward.
 </p>
 
 ##### Mechanical 2/3 - Assembly layer
-This layer is used for a PDF printout of where which components must be placed. This way people can easily assess that this one is IC1, R32 here and the like without the need for bulky silkscreen.
+This layer is used for a PDF printout of where which components must be placed.
 
-The assembly layer must contain a 'special string', ".Designator" in the middle of the placement body assigning the designator of the component. The standard size for this is 0.5 mm height.
+The assembly layer must contain
+1. A component outline (same as 3d model)
+	* Text width = 0.05 mm
+2. A ".Designator" special string in the center of component to show designator
+	* Font = TrueType
+	* Text size = 0.5 mm
+3. Components like diodes, ICs and polarized capacitors must clearly mark pin 1, cathode or negative terminal
 
-Special attention must be brought to components like polarized capacitors, diodes and ICs with numbers. Said packages' assembly layers must easily assess in which direction pin 1 (or cathode) is oriented.
 
 ##### Mechanical 4/5 - Courtyard and center point
-Mechanical 4 and 5 layers must be setup as a layer pair, so the component courtyard and reference origin automatically switches layers as well.
-
 The courtyard is used to describe the distance from the component and land patterns to components around. [IPC-7251](http://www.ipc.org/committee/drafts/1-13_d_7251WD1.pdf) is a standard for land patterns and describes the point and requirements for courtyard excess.
 
-In the DTU Altium Library nominal courtyard excess is used: 0.25 mm from the outer bondaries of the component. This value is measured from the center of the 3d-outline line. The center point is made of a "cross" with 0.1mm wide 1mm lines.
+The following layers cover the courtyards:
+* Mechanical 4 = Top courtyard
+* Mechanical 5 = Bottom courtyard
+
+For courtyards the following rules apply:
+1. By default courtyard follows the nominal board densities
+	* Courtyard excess = 0.25 mm (Level-B nominal density)
+	* Measure courtyard excess from mechanical or electrical limiting factor (can be either pads or 3d model outline)
+2. Courtyard linewidth = 0.05 mm
+3. The courtyard layer must contain a crosshair at a component's center of gravity
+	* For complex components crosshair can be placed at component origin
+	* Draw crosshair with 0.05 mm wide lines
+	* Draw crosshair with 1 mm long lines
+4. Bottom layer can contain courtyard as well, if the component requires so. The sames rules apply as for the top layer, although crosshair can be left out
 
 ##### Mechanical 6/7 - 3d model and component outline
-The 3d model is often made with a "place -> 3d body" and can either be a simple "box" with the width, length and height of the actual component. The component outline outlines with a 0.1 mm wide lines where the 3d body ends.
+All components (except for complex components like transformers and inductors) must contain a suitable 3d model. This allows the designer to make a mechanical verification of the PCB.
+
+The following layers cover 3d models and component outlines:
+* Mechanical 6 = Top 3d body
+* Mechanical 7 = Bottom 3d body
+
+For the 3d layers the following rules apply:
+1. 3d models can either be:
+	* Exact models found on the internet (watch licensing rules) or,
+	* Squared boxes equivalating the mechanical constraints of the component
+2. The 3d model must be placed on the layer, on which it is physically located
+3. The 3d model must be oriented as per the footprint's dictation
+4. Around the 3d model a component outline must be drawn in the same layer
+	* Line width = 0.1 mm
+
+#### Mechanical 8, 9, 10, 11 and 27
+The mentioned layers are restricted from component footprints, unless the footprint contains explicit limits/boundaries for the manufacturer or in-house to know.
 
 ## Licenses
 Under no circumstances must any licensed content excluding academic use be used in the building of the components. This in general applies to especially 3d models found on the internet.
