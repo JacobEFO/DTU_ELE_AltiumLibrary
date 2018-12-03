@@ -36,7 +36,10 @@ These are nice-to-have parameters, used for quick and easy BOM generation and sy
 * Dielectric/material (dielectric if capacitor, material if a specific resistor)
 * Alternative parameters such as current, voltage, operating temperature and etc
  -->
-#### Componend Descriptions
+#### Component Descriptions
+
+___
+### Schematic Symbols
 
 #### Designators
 All components must in general include a meaningful designator.
@@ -92,16 +95,27 @@ The safety mark could look like this:
 In this manner, the user/designer will easily catch on to the importance of the safety rated component.
 
 #### Confidential components
-FIND A WAY TO DEAL WITH CONFIDENTIAL STUFF!!! Maybe they should not be included in the Altium library at all.
+Confidential components and projects should under no circumstances be located on the Altium Vault. All confidential content must be handled according to the rules set by the specific project.
 
+___
 ### Footprints
+This section covers rules and standards for footprint naming convention and used layers for documentation, assembly and 3d models.
+
+By default footprints should follow the existing footprint and land pattern standard. The current IPC standard is IPC-7351B.
 
 #### Naming convention
+INCLUDE MORE GENERIC NAMING CONVENTION OTHER THAN MANFUACTURER VENDOR CODES
+
 For manufacturer specific footprints or footprints made according to a given manufacturer's specifics, the naming must carry the manufacturer name according to Altium's default [Vendor Codes](https://techdocs.altium.com/display/ADOH/Vendor+Codes).
+
+For manufacturers not listed in Altium's default vendor codes, use the following underneath. If you do experience a manufacturer often used and not present on either lists, please make a pull request.
 
 | Company         	| Abbreviation 	|
 | --- 				| --- 			|
 | Nexperia 			| NEXP 			|
+
+#### Pad shapes
+
 
 #### Layers
 
@@ -137,20 +151,29 @@ The overlay layer is not mandatory to include, but it often increases the overvi
 7. Pin 1 is identified by extending the silkscreen along Pin 1 length of pads
 when component leads extend outward.
 
+Pin identification is shown in the following figure:
+
 <p align="center">
 	<img src="figures/SilkscreenPolarityMarking.PNG" alt="SilkscreenPolarity" style="width: 60%;"/>
 </p>
 
 ##### Mechanical 2/3 - Assembly layer
-This layer is used for a PDF printout of where which components must be placed.
+This layer is used for a PDF printout of where which components must be placed. This allows the designer and/or manufacturer ease of design process as well as manufacturing verification.
 
-The assembly layer must contain
-1. A component outline (same as 3d model)
+The following layers cover the assembly layers:
+* Mechanical 2 = Top assembly
+* Mechanical 3 = Bottom assembly
+
+The assembly layer must contain:
+1. A component outline (same as 3d model outline)
 	* Text width = 0.05 mm
 2. A ".Designator" special string in the center of component to show designator
 	* Font = TrueType
 	* Text size = 0.5 mm
 3. Components like diodes, ICs and polarized capacitors must clearly mark pin 1, cathode or negative terminal
+	* Pin 1 mark should be a bevel
+		* 1 mm or 25% of package size (whichever is greatest)
+4. All designators must where applicable be located inside the component outuline
 
 
 ##### Mechanical 4/5 - Courtyard and center point
