@@ -9,37 +9,11 @@ In order to have a coherent structure please follow the upcomming rules and requ
 
 When generating components for the vault, using the standard template will include most of the required parameters
 
-<!-- ### Schematic Symbols
-This section contains the rules and guidelines for the schematic symbols.
-* Always drawn in mils on a 50 mil grid
-* Symbol comment and desciption must be filled
-
-#### Must have parameters
-The following parameters are a bare minimum, and must be written in the given format.
-* Manufacturer
-* Manufacturer part number
-* Published (when was this model released, yyyy-mm-dd)
-* Publisher (who created it, initials or full name)
-* Datasheet version (write as given in datasheet)
-* Link to used datasheet (preferably the given manufacturer)
-
-#### Nice-to-have parameters
-These are nice-to-have parameters, used for quick and easy BOM generation and symbol assessment.
-* PackageDescription
-* PackageReference
-* Farnell part number
-* Digikey part number
-* Mouser part number
-* RSonline part number
-* Tolerance
-* Voltage rating (note if AC or DC)
-* Dielectric/material (dielectric if capacitor, material if a specific resistor)
-* Alternative parameters such as current, voltage, operating temperature and etc
- -->
 #### Component Descriptions
 
 ___
 ### Schematic Symbols
+All schematic symbols must be drawn on a mil grid. 
 
 #### Designators
 All components must in general include a meaningful designator.
@@ -75,8 +49,20 @@ All components must in general include a meaningful designator.
 | Y 			| Crystal / oscillator 					|
 | Z 			| Zener diode 							|
 
-#### Font size
+#### Pin length & Font size
+This section covers requirements for pins. All pins must be placed on a minimum of 100 mil grid with multiples of 50 mil. Drawings can be drawn with any sized grid.
+
+Font size = 6
+Pin length = minimum 100 mil maximum 300 mil, steps of 100 allowed
+
 #### Symbol outline and fill
+This section describes the fill and component outline. By default symbols should follow the guidelines listed below:
+
+1. Symbol outline
+	* Width = small
+	* Color = black or default blue
+2. Component fill
+	* Background color = white
 
 #### Other guidelines for schematic symbols
 * Logic components such as AND, NAND, NOR, Opamp, Comparators etc should be drawn as individual parts. That way a single AND of a QUAD-AND can be placed individually. This improves the schematic readability.
@@ -139,19 +125,20 @@ The overlay is the silkscreen layer. This layer most often contains a part of th
 
 The overlay layer is not mandatory to include, but it often increases the overview of the PCB as well as improves the assembly process.
 
-1. Silkscreen linewidth = 0.2 mm
+1. Silkscreen linewidth = 0.1mm <= 0.15 mm
 2. Reference designator must be drawn directly on the silkscreen layer
 	* Text size = 1 mm
 	* Text width = 0.15 mm
 3. Silkscreen must not be placed over pads or areas of exposed copper
 	* Clearance between silkscreen and exposed copper elements must be at least 0.2mm.
 4. Silkscreen outlines should be inside placement courtyard
+	* Only exception is pin count on connectors
 5. For SMD footprints, silkscreen must be fully visible after boards assembly (no silkscreen allowed under component)
 6. For through-hole components, silkscreen may be placed under component to aid in assembly process
 7. Pin 1 is identified by extending the silkscreen along Pin 1 length of pads
 when component leads extend outward.
 
-Pin identification is shown in the following figure:
+Pin identification on silkscreen is shown in the following figure:
 
 <p align="center">
 	<img src="figures/SilkscreenPolarityMarking.PNG" alt="SilkscreenPolarity" style="width: 60%;"/>
@@ -165,8 +152,9 @@ The following layers cover the assembly layers:
 * Mechanical 3 = Bottom assembly
 
 The assembly layer must contain:
-1. A component outline (same as 3d model outline)
-	* Text width = 0.05 mm
+1. A component outline (can be the same as 3d model outline)
+	* Maximum or nominal body size
+	* Text width = 0.1 mm
 2. A ".Designator" special string in the center of component to show designator
 	* Font = TrueType
 	* Text size = 0.5 mm
