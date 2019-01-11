@@ -20,6 +20,7 @@ All components must in general include a meaningful designator.
 
 | Designator    | Component Type						|
 | --- 			| --- 									|
+| BR 			| Bridge Rectifier						|
 | BT 			| Battery								|
 | C 			| Capacitor 							|
 | D 			| Diode/LED								|
@@ -96,12 +97,15 @@ For manufacturer specific footprints or footprints made according to a given man
 
 For manufacturers not listed in Altium's default vendor codes, use the following underneath. If you do experience a manufacturer often used and not present on either lists, please make a pull request.
 
-| Company         	| Abbreviation 	|
-| --- 				| --- 			|
-| Nexperia 			| NEXP 			|
+| Company         						| Abbreviation 	|
+| ---					 				| --- 			|
+| Micro Commercial Components 			| MCC 			|
+| Nexperia 								| NEXP 			|
+| Vishay 								| VISH 			|
 
 #### Pad shapes
 
+#### Pin 1 location
 
 #### Layers
 
