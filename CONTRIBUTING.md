@@ -99,9 +99,12 @@ For manufacturers not listed in Altium's default vendor codes, use the following
 
 | Company         						| Abbreviation 	|
 | ---					 				| --- 			|
+| Cinch Connectivity Solutions 			| CCS 			|
 | Micro Commercial Components 			| MCC 			|
 | Nexperia 								| NEXP 			|
+| Schurter 								| SCHU 			|
 | Vishay 								| VISH 			|
+| Wurth Elektronik						| WUE 			|
 
 #### Pad shapes
 
