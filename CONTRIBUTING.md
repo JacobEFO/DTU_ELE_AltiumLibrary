@@ -99,12 +99,13 @@ The footprints should be named correspondingly to the following rules (mixed a w
 
 All footprints are given a vendor code initially, to distinguish footprints from different manufacturers designed according to their specifications. When naming the package (eg. SOT23-3 or BGA-12) use manufacturer naming. For instance Texas Instruments name their DSBGA-4 with YZV0004-4. The description field carries the information about the standard name for the package.
 
-The generic way of naming the component is:
-	* [MFN]_[MFN_Package]-[no. pins]_B[x]x[y]x[z][unit]_P[pad pitch][unit]_[IPC std/courtyard]
+[comment]: <> The generic way of naming the component is:
+[comment]: <> * [MFN]_[MFN_Package]-[no. pins]_B[x]x[y]x[z][unit]_P[pad pitch][unit]_[IPC std/courtyard]
 
 A few examples of named footprints are given below:
 
 | Name 											| Description 																				|
+| --- 											| --- 																						|
 | TI_YZV0004-4_B0.88x0.88x0.5mm_P0.5mm_N 		| Texas Instruments, YZV0004-4 (DSBGA-4), Body 0.88x0.88x0.5 mm, Pitch 0.5 mm, IPC Nominal 	|
 | DIOD_SOD323_B1.7x1.3x1.05mmP2.11mm_Nominal 	| Diodes Incorporated, SOD323, Body 1.7x1.3x1.05 mm, Pitch 2.11 mm, IPC Nominal 			|
 
